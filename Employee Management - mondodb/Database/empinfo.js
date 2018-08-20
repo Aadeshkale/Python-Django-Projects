@@ -1,0 +1,117 @@
+db.empinfo.insert({
+	name:{
+		first:'rajan',
+		last:'shinde'
+	},
+	age:21,
+	salary:40000,
+	address:{
+		location:'N2 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'sachin',
+		last:'mane'
+	},
+	age:22,
+	salary:45000,
+	address:{
+		location:'N5 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'shubhngi',
+		last:'ipper'
+	},
+	age:25,
+	salary:40000,
+	address:{
+		location:'N2 cidco ramnagar',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'shivam',
+		last:'madane'
+	},
+	age:23,
+	salary:46000,
+	address:{
+		location:'N2 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'ravi',
+		last:'raj'
+	},
+	age:21,
+	salary:50000,
+	address:{
+		location:'N5 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'kunal',
+		last:'padalkar'
+	},
+	age:21,
+	salary:45000,
+	address:{
+		location:'N6 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'shraddha',
+		last:'golwal'
+	},
+	age:23,
+	salary:45000,
+	address:{
+		location:'N2 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'rajshree',
+		last:'bedke'
+	},
+	age:23,
+	salary:45000,
+	address:{
+		location:'N6 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
+db.empinfo.insert({
+	name:{
+		first:'kurshna',
+		last:'pande'
+	},
+	age:24,
+	salary:40000,
+	address:{
+		location:'N5 cidco',
+		city:"A'bad",
+		state:'Maharastra'
+	}
+});
