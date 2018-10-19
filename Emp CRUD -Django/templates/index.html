@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css'%}">
+
+</head>
+<body>
+<header>
+        <h1 class="text-center text-dark p-3 bg-light">Employee Info System</h1>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <div class="w-50 mx-auto  p-2 border border-dark">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <h2 class="text-center">Please Choose ur option</h2>
+                        <div class="form-group">
+                            {{myform.name}}
+                            {{myform.email}}
+                            {{myform.phone}}  
+                        </div>
+                        <div>
+                            <p>Select ur Gender:</p>
+                            {{myform.gender}} 
+                        </div>
+                        <div>
+                            <p class="d-inline mr-2">Please Select ur city:</p>
+                            {{myform.city}}
+                        </div>
+                        <input type="submit" class="btn btn-outline-black">
+                        <input type="reset" class=" btn btn-outline-black">
+                    </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script src="{% static 'js/fontawesome-all.js' %}"></script>
+</body>
+</html>

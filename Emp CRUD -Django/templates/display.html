@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css'%}">
+
+</head>
+<body>
+<header>
+        <h1 class="text-center text-dark p-3 bg-light">Employee Info System</h1>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="mx-auto w-50">
+                    <table class="text-center table table-bordered table-dark table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Eid</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Gender</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in data %}
+                            <tr>
+                                <td>{{row.eid}}</td>
+                                <td>{{row.name}}</td>
+                                <td>{{row.email}}</td>
+                                <td>{{row.phone}}</td>
+                                <td>{{row.gender}}</td>
+                                <td>{{row.city}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script src="{% static 'js/fontawesome-all.js' %}"></script>
+</body>
+</html>
