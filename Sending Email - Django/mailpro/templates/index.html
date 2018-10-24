@@ -1,0 +1,49 @@
+<!DOCTYPE <!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mail Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div>
+        <h1 class="text-secondary text-center mb-5">Send your commet through email</h1>
+        <form method="POST" class="w-50 p-3 mx-auto border border-primary">
+           {% csrf_token %}
+           
+           {% if messages %}
+               {% for msg in messages %}        
+                    <div class="form-group">
+                        <div class="alert alert-{{msg.tags}} alert-dismissible ">
+                            <a href="./" class="close" data-dissmiss="alert">&times;</a>
+                            {{msg}}
+                        </div>
+                    </div>        
+               {% endfor %}
+           {% endif %}
+           
+
+            <div class="form-group">
+                {{myform.name}}
+                {{myform.subject}}
+                {{myform.comment}}
+                <input type="submit" class="btn btn-outline-deep-purple">
+                <input type="reset" class="btn btn-outline-deep-purple float-right">
+            </div>
+        </form>
+    </div>
+  
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script src="{% static 'js/fontawesome-all.js' %}"></script>
+</body>
+</html>
