@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calc App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #cal{
+            width: 280px;
+            padding: 10px;
+            border: 2px solid green;
+            margin: auto;
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="cal">
+        <h1>Calculater</h1>
+            <form action="./home/opration/" method="GET">
+                <table>
+                    <tr>
+                        <td>First No:</td>
+                        <td>
+                            {{myform.num1}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Second No:</td>
+                        <td>
+                            {{myform.num2}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="add" name="but">
+                            <input type="submit" value="sub" name="but">
+                            <input type="submit" value="mul" name="but">
+                            <input type="submit" value="div" name="but">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+    </div>
+</body>
+</html>
