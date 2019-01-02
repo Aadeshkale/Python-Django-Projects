@@ -6,39 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css'%}">
-
+    <link rel="stylesheet" type="text/css"  href=" {% static 'css/bootstrap.css' %} " />
+    <link rel="stylesheet" type="text/css"  href=" {% static 'css/mdb.css' %} " />
+    <link rel="stylesheet" type="text/css"  href=" {% static 'css/fontawesome-all.css' %} " />
+    <link rel="stylesheet" type="text/css"  href=" {% static 'css/style.css' %} " />
+  
 </head>
 <body>
-<header>
-        <h1 class="text-center text-dark p-3 bg-light">Employee Info System</h1>
-</header>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-               <div class="w-50 mx-auto  p-2 border border-dark">
-                    <h1>Select ur option</h1>
-                    <ul>
-                        <li><a href="home/insert">Insert</a></li>
-                        <li><a href="home/display">Display</a></li>
-                        <li><a href="home/update">Update</a></li>
-                        <li><a href="home/delete">Delete</a></li>
-                    </ul>                         
+<h1 class="text-center text-danger mt-2">CRUD opration in django</h1>
+<div class="row">
+        <div class="card w-25 mx-auto mt-5 p-3">
+                <div class="card-header bg-light text-center">
+                    <h3>Select ur choice</h3>
                 </div>
-            </div>       
-         </div>
-    </div>
-</section>
-
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a href="./myapp/insert">
+                                Insert<i class="fa fa-plus float-right"></i>
+                            </a>   
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                                <a href="./myapp/display">
+                                    Display<i class="fa fa-table float-right"></i>
+                                </a>    
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a href="./myapp/update">
+                                Update<i class="fa fa-pencil-alt float-right"></i>
+                            </a>        
+                            </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a href="./myapp/delete">
+                                Delete<i class="fa fa-trash-alt float-right"></i>
+                            </a>    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+              
+</div>  
+ 
 <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'js/popper.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.js' %}"></script>
-<script src="{% static 'js/mdb.js' %}"></script>
-<script src="{% static 'js/fontawesome-all.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script> 
+<script src="{% static 'js/bootstrap.js' %}"></script> 
+<script src="{% static 'js/mdb.js' %}"></script> 
+<script src="{% static 'js/fontawesome-all.js' %}"></script>     
 </body>
 </html>
