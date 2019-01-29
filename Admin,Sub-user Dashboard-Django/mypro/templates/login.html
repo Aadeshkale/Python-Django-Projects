@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block myblock %}
+    <h1 class=" text-danger text-center mt-2 p-2">Login Here:</h1>
+    <div class="w-25 mx-auto border border-dark p-2">
+        <form method="POST">
+            
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="alert alert-{{msg.tags}} alert-dismissible">
+                        <a href="" class="close">&times;</a>
+                        {{msg}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+                
+            {% csrf_token %}
+                <div class="form-group clearfix">
+                        {{myform.as_table}}
+                        <div class="mx-auto mt-2">
+                            <input type="submit" class="btn btn-primary float-right" value="login">
+                        </div>
+                </div>
+        </form>
+    </div>
+{% endblock myblock %}
+    

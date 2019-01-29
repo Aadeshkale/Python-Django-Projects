@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mypro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script rel="stylesheet" src="{% static 'js/jquery-3.2.1.min.js' %}" type="text/script" defer></script>
+    <script rel="stylesheet" src="{% static 'js/popper.min.js' %}" type="text/script" defer></script>
+    <script rel="stylesheet" src="{% static 'js/bootstrap.js' %}" type="text/script" defer></script>
+    <script rel="stylesheet" src="{% static 'js/fontawesome-all.js' %}" type="text/script" defer></script>
+
+        
+</head>
+<body>
+    
+    {% block myblock %}
+        
+    {% endblock myblock %}
+        
+</body>
+</html>

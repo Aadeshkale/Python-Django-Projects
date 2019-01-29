@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block myblock %}
+    <h1 class="text-center text-danger p-2">Hi {{adminuser}},Your Dashboard</h1>
+    <div class="w-50 mx-auto bordeer border-danger p-2">
+
+        <form method="POST" class="mx-auto">
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="alert alert-{{msg.tags}} alert-dismissible">
+                        <a href="" class="close">&times;</a>
+                        {{msg}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>
+                        {{myform.userid}}
+                    </td>
+                    <td>
+                        {{myform.password}}
+                    </td>
+                    <td>
+                        <input type="submit" class="btn btn-success" value="CreateUser">
+                        <a href="{% url 'index' %}" class="btn btn-info">Home</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <table class="mt-3 text-center table table-bordered">
+                <thead>
+                    
+                            <tr>
+                                <td>userid</td>
+                                <td>password</td>
+                            </tr>
+                
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                        <tr>
+                            <td>{{i.userid}}</td>
+                            <td>{{i.password}}</td>
+                        </tr>
+                    {% endfor %}    
+                </tbody>    
+            </table>
+    </div>
+
+{% endblock myblock %}
