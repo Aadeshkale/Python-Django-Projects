@@ -7,7 +7,7 @@ class RegForm(forms.ModelForm,forms.Form):
     userid=forms.CharField(max_length=20,
     label="Enter Your Username",
     widget=forms.TextInput(attrs={
-        'class':'form-control',
+        'class':'text-left form-control',
     })
     )
     password=forms.CharField(max_length=30,
@@ -40,7 +40,7 @@ class UserForm(forms.Form):
     userid=forms.CharField(max_length=20,
     label="Enter Your Username",
     widget=forms.TextInput(attrs={
-        'class':'form-control',
+        'class':'text-left form-control',
         'placeholder':'Enter userid',
     })
     )
